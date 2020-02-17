@@ -1,0 +1,4 @@
+{
+  "mongodbURI": "mongodb+srv://nandankmr:sherlock@cluster0-bnrcv.mongodb.net/test?retryWrites=true&w=majority",
+  "jwt_secret": "myjwtsectret"
+}
