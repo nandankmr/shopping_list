@@ -5,6 +5,8 @@ const cors = require("cors");
 const path = require("path");
 // const db = config.get("mongodbURI");
 
+require("dotenv").config();
+
 const app = express();
 
 const PORT = process.env.PORT || 5000;
