@@ -6,7 +6,7 @@ const auth = (req, res, next) => {
   if (!token) res.status(401).json({ msg: "no token, authorisation denied" });
   else
     try {
-      const decoded = jwt.verify(token, require("config").get("jwt_secret"));
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
       req.user = decoded;
       next();
