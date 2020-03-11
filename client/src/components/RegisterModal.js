@@ -32,7 +32,11 @@ const RegisterModal = ({ auth, setAuth, message, setMessage }) => {
     if (name.trim() && password.trim() && email.trim()) {
       if (regex.test(email.trim())) {
         setProgress(true);
-        Axios.post("/users/register", { name, email, password })
+        Axios.post("https://shoppinglistbackend.herokuapp.com/users/register", {
+          name,
+          email,
+          password
+        })
           .then(
             res => {
               console.log(res);

@@ -13,7 +13,7 @@ const ShoppingList = ({ auth }) => {
 
   const getItems = () => {
     setSpinning(true);
-    Axios.get("/api/items", {
+    Axios.get("https://shoppinglistbackend.herokuapp.com/api/items", {
       headers: {
         "x-auth-token": auth.token
       }
@@ -30,7 +30,7 @@ const ShoppingList = ({ auth }) => {
     if (name) {
       setSpinning(true);
       Axios.post(
-        "/api/items",
+        "https://shoppinglistbackend.herokuapp.com/api/items",
         { name },
         {
           headers: {
@@ -46,7 +46,7 @@ const ShoppingList = ({ auth }) => {
 
   const deleteItem = id => {
     setSpinning(true);
-    Axios.delete("/api/items/" + id, {
+    Axios.delete("https://shoppinglistbackend.herokuapp.com/api/items/" + id, {
       headers: {
         "x-auth-token": auth.token
       }

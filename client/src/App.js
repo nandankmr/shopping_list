@@ -32,7 +32,7 @@ const App = () => {
   return (
     <div className="app">
       <Navbar color="dark" dark expand="sm" className="mb-5">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <NavbarBrand href="/">Shopping List</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>

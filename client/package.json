@@ -37,5 +37,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://shoppinglistbackend.herokuapp.com/"
+  "proxy": "https://shoppinglistbackend.herokuapp.com",
+  "homepage": "https://shoppinglist.imfast.io"
 }
