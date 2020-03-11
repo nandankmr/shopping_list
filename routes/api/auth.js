@@ -2,7 +2,7 @@ const router = require("express").Router();
 const User = require("../../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const config = require("config");
+// const config = require("config");
 const auth = require("../../middleware/auth");
 
 // POST /auth/login
@@ -21,7 +21,7 @@ router.post("/login", (req, res) => {
             else {
               jwt.sign(
                 { id: user.id },
-                config.get("jwt_secret"),
+                process.env.JWT_SECRET,
                 { expiresIn: 3600 },
                 (err, token) => {
                   if (err) throw err;

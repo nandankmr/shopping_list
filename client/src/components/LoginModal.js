@@ -25,7 +25,10 @@ const LoginModal = ({ auth, setAuth, message, setMessage }) => {
 
   const handleLogin = () => {
     setProgress(true);
-    Axios.post("/auth/login", { email, password })
+    Axios.post("https://shoppinglistbackend.herokuapp.com/auth/login", {
+      email,
+      password
+    })
       .then(data => {
         console.log(data);
         setAuth({

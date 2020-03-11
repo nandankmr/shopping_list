@@ -2,7 +2,7 @@ const router = require("express").Router();
 const User = require("../../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const config = require("config");
+// const config = require("config");
 
 // POST /users/register
 // @access public
@@ -26,7 +26,7 @@ router.post("/register/", (req, res) => {
               newUser.save().then(data => {
                 jwt.sign(
                   { id: data.id },
-                  config.get("jwt_secret"),
+                  process.env.JWT_SECRET,
                   { expiresIn: 3600 },
                   (err, token) => {
                     if (err) throw err;
